@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Mensagens</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="header">
+    <form method="post" action="/">
+        <label>Título:</label>
+        <label>
+            <input type="text" name="title">
+        </label>
+        <label>Body:</label>
+        <label>
+            <input type="text" name="body">
+        </label>
+        <input type="submit" value="Adicionar novo cartão">
+    </form>
+</div>
+<div class="main">
+    {{ range . }}
+        <div class="card">
+            <h2>{{ .Title }}</h2>
+            <p>{{ .Body }}</p>
+        </div>
+    {{ end }}
+</div>
+<div class="footer">
+    Rodapé
+</div>
+</body>
+</html>

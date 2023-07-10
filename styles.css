@@ -1,0 +1,52 @@
+/* Define que a largura máxima será 100% do viewport, e esconde qualquer overflow horizontal. */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    /* Coloca os elementos do body em uma coluna, e faz com que ele ocupe toda a altura da janela do navegador. */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 5%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.add-button {
+    margin-left: 10px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.card {
+    border: 1px solid #000;
+    padding: 10px;
+    overflow: auto;
+}
+
+.footer {
+    width: 100%;
+    height: 5%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
