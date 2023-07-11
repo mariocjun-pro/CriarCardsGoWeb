@@ -102,6 +102,8 @@ func main() {
 
 	http.HandleFunc("/", HomePage)
 	http.Handle("/styles.css", http.FileServer(http.Dir(".")))
+	log.Print("Iniciando o servidor na porta 8080")
+	log.Print("Acesse http://localhost:8080")
 	err = http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Fatal("Erro ao iniciar o servidor: ", err)
